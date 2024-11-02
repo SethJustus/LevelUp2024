@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aece63980a8f735429ed4a2d64d25805, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  Title: Speed Stat
-  Experience: 0
+  Experience: 181
+  TickRateSeconds: 1.5
+  SyncTickRate: 1

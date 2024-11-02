@@ -4,13 +4,15 @@ using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "New Statistic", menuName = "New Statistic")]
+[CreateAssetMenu(fileName = "New Statistic", menuName = "Statistic")]
 public class Statistic : ScriptableObject
 {
     public int Experience;
 
     public float TickRateSeconds = 1;
 
+    public bool SyncTickRate = false;
+    
     private bool IsTicking = false;
 
     public void OnEnable()
@@ -28,6 +30,12 @@ public class Statistic : ScriptableObject
     private void GainExperience(int amount)
     {
         this.Experience += amount;
+
+        if (this.SyncTickRate)
+        {
+            this.TickRateSeconds = this.Experience / 100f;
+        }
+
         Debug.Log($"Gained {amount} Experience! New Experience: {this.Experience}");
     }
 
