@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     
     
     #region Public Methods
-    public void Move(Vector2 movementVector)
+    public void HorizontalMove(Vector2 movementVector)
     {
         if (movementVector != Vector2.zero)
         {
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         // Use Time.deltaTime because physics logic is being called from Update
         this._rigidbody.linearVelocity = movementVector * speedMultiplier * Time.deltaTime;
     }
-    
+
     public void Dash(Vector2 movementVector)
     {
         if (!this._canDash)
@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
             return;
         }
 
-        Debug.Log("dashing");
         this._rigidbody.AddForce(movementVector * this.AgilityStatistic.Experience, ForceMode2D.Impulse);
         this.StartCoroutine(this.DashCooldown());
     }

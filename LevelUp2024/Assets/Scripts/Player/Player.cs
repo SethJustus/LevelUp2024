@@ -5,6 +5,8 @@ public class Player : HealthObject
 {
     #region Fields
     private IPlayerController _controller;
+    private Vector2 _movementVector;
+    private bool _dashnextupdate;
     #endregion
     
     #region Parameters
@@ -20,14 +22,23 @@ public class Player : HealthObject
     
     void Update()
     {
-        var movementVector = MoveAction.action.ReadValue<Vector2>();
-        _controller.Move(movementVector);
-        var dashInput = DashAction.action.ReadValue<bool>();
-        if (dashInput)
+        _movementVector = MoveAction.action.ReadValue<Vector2>();
+        if (DashAction.action.triggered)
         {
-            _controller.Dash(movementVector);
+            this._dashnextupdate = true;
         }
     }
+
+    void FixedUpdate()
+    {
+        _controller.HorizontalMove(_movementVector);
+        if (this._dashnextupdate)
+        {
+            _controller.Dash(_movementVector);
+            this._dashnextupdate = false;
+        }
+    }
+
     #endregion
     
     #region Methods
