@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(IPlayerController))]
-public class Player : MonoBehaviour
+public class Player : HealthObject
 {
     #region Fields
     private IPlayerController _controller;
@@ -22,6 +22,14 @@ public class Player : MonoBehaviour
     {
         var movementVector = MoveAction.action.ReadValue<Vector2>();
         _controller.Move(movementVector);
+    }
+    #endregion
+    
+    #region Methods
+    // overriding the Die() method from HealthObject base class
+    protected override void Die()
+    {
+        // TODO: Custom death logic goes here
     }
     #endregion
 }
