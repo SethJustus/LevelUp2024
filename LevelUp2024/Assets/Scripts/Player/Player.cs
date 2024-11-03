@@ -9,7 +9,7 @@ public class Player : HealthObject
     
     #region Parameters
     [SerializeField] private InputActionReference MoveAction;
-
+    [SerializeField] private InputActionReference DashAction;
     #endregion
     
     #region Unity Methods
@@ -22,6 +22,11 @@ public class Player : HealthObject
     {
         var movementVector = MoveAction.action.ReadValue<Vector2>();
         _controller.Move(movementVector);
+        var dashInput = DashAction.action.ReadValue<bool>();
+        if (dashInput)
+        {
+            _controller.Dash(movementVector);
+        }
     }
     #endregion
     
