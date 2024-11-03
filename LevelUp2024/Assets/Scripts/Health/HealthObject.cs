@@ -7,12 +7,24 @@ public class HealthObject : MonoBehaviour
     public int Health { get; private set; } = 100;
 
     [SerializeField] private int MaxHealth = 100;
+
+    private IHealthBar _healthBar;
+    #endregion
+    
+    #region Unity Methods
+    void Start()
+    {
+        // Can't serialize interface in unity, so I am getting it manually here
+        this._healthBar = GetComponentInChildren<IHealthBar>();
+    }
+
     #endregion
     
     #region Methods
     public void TakeDamage(int damage)
     {
         this.Health -= damage;
+        this._healthBar.UpdateUI(this.Health, this.MaxHealth);
         if (this.Health <= 0)
         {
             this.Die();
@@ -22,6 +34,7 @@ public class HealthObject : MonoBehaviour
     public void Heal(int heal)
     {
         this.Health += heal;
+        this._healthBar.UpdateUI(this.Health, this.MaxHealth);
     }
 
     protected virtual void Die()
