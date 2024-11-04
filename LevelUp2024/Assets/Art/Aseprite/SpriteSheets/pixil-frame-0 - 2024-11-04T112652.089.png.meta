@@ -1,79 +1,79 @@
 fileFormatVersion: 2
-guid: 11de59c56e0553e439e16b55448fb840
+guid: ea7b3d562fd67934ebca0e3a7d5dd91c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7560040696187520287
-    second: pixil-frame-0 - 2024-11-03T185107.960_0
+      213: -2177436861004637460
+    second: pixil-frame-0 - 2024-11-04T112652.089_0
   - first:
-      213: 4792335564545512751
-    second: pixil-frame-0 - 2024-11-03T185107.960_1
+      213: -3050572845234806790
+    second: pixil-frame-0 - 2024-11-04T112652.089_1
   - first:
-      213: 1916050407870822818
-    second: pixil-frame-0 - 2024-11-03T185107.960_2
+      213: 7645154041931109026
+    second: pixil-frame-0 - 2024-11-04T112652.089_2
   - first:
-      213: -7544226994955335346
-    second: pixil-frame-0 - 2024-11-03T185107.960_3
+      213: 4424084455228692765
+    second: pixil-frame-0 - 2024-11-04T112652.089_3
   - first:
-      213: 1341484614299648042
-    second: pixil-frame-0 - 2024-11-03T185107.960_4
+      213: -6654526944984642615
+    second: pixil-frame-0 - 2024-11-04T112652.089_4
   - first:
-      213: 5950490303448122477
-    second: pixil-frame-0 - 2024-11-03T185107.960_5
+      213: 2264306578846907312
+    second: pixil-frame-0 - 2024-11-04T112652.089_5
   - first:
-      213: 4150200319944444580
-    second: pixil-frame-0 - 2024-11-03T185107.960_6
+      213: -7296509423871129363
+    second: pixil-frame-0 - 2024-11-04T112652.089_6
   - first:
-      213: -4537406198638986238
-    second: pixil-frame-0 - 2024-11-03T185107.960_7
+      213: -436621216646612568
+    second: pixil-frame-0 - 2024-11-04T112652.089_7
   - first:
-      213: -6920491253029367244
-    second: pixil-frame-0 - 2024-11-03T185107.960_8
+      213: 7723356665301385197
+    second: pixil-frame-0 - 2024-11-04T112652.089_8
   - first:
-      213: -3390482923115430872
-    second: pixil-frame-0 - 2024-11-03T185107.960_9
+      213: 8895565669249696450
+    second: pixil-frame-0 - 2024-11-04T112652.089_9
   - first:
-      213: 827202622207200012
-    second: pixil-frame-0 - 2024-11-03T185107.960_10
+      213: 4134812260726080153
+    second: pixil-frame-0 - 2024-11-04T112652.089_10
   - first:
-      213: -4715942554370315685
-    second: pixil-frame-0 - 2024-11-03T185107.960_11
+      213: -7367827203198673078
+    second: pixil-frame-0 - 2024-11-04T112652.089_11
   - first:
-      213: 7045301669985750388
-    second: pixil-frame-0 - 2024-11-03T185107.960_12
+      213: -2291711203293079542
+    second: pixil-frame-0 - 2024-11-04T112652.089_12
   - first:
-      213: 1255378042317543495
-    second: pixil-frame-0 - 2024-11-03T185107.960_13
+      213: 694043273561957142
+    second: pixil-frame-0 - 2024-11-04T112652.089_13
   - first:
-      213: -5616002671922484010
-    second: pixil-frame-0 - 2024-11-03T185107.960_14
+      213: -5852144266099682472
+    second: pixil-frame-0 - 2024-11-04T112652.089_14
   - first:
-      213: 9128796091271017003
-    second: pixil-frame-0 - 2024-11-03T185107.960_15
+      213: 3866077334701983343
+    second: pixil-frame-0 - 2024-11-04T112652.089_15
   - first:
-      213: 2842604317313866930
-    second: pixil-frame-0 - 2024-11-03T185107.960_16
+      213: 5523783671953056869
+    second: pixil-frame-0 - 2024-11-04T112652.089_16
   - first:
-      213: 3473164898921226244
-    second: pixil-frame-0 - 2024-11-03T185107.960_17
+      213: -1931711335994856374
+    second: pixil-frame-0 - 2024-11-04T112652.089_17
   - first:
-      213: -3811332660800749562
-    second: pixil-frame-0 - 2024-11-03T185107.960_18
+      213: 2551658826931562450
+    second: pixil-frame-0 - 2024-11-04T112652.089_18
   - first:
-      213: -6152623490501630014
-    second: pixil-frame-0 - 2024-11-03T185107.960_19
+      213: -995755440836564640
+    second: pixil-frame-0 - 2024-11-04T112652.089_19
   - first:
-      213: 1570638980745338446
-    second: pixil-frame-0 - 2024-11-03T185107.960_20
+      213: -3880615027148412838
+    second: pixil-frame-0 - 2024-11-04T112652.089_20
   - first:
-      213: 3736092737382882846
-    second: pixil-frame-0 - 2024-11-03T185107.960_21
+      213: -1160728777308368342
+    second: pixil-frame-0 - 2024-11-04T112652.089_21
   - first:
-      213: -3161616894961955400
-    second: pixil-frame-0 - 2024-11-03T185107.960_22
+      213: -9080676103789678173
+    second: pixil-frame-0 - 2024-11-04T112652.089_22
   - first:
-      213: -2972111604709809463
-    second: pixil-frame-0 - 2024-11-03T185107.960_23
+      213: 7442119207747860365
+    second: pixil-frame-0 - 2024-11-04T112652.089_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -169,7 +169,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_0
+      name: pixil-frame-0 - 2024-11-04T112652.089_0
       rect:
         serializedVersion: 2
         x: 0
@@ -182,16 +182,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 55c7cd6a9b47cb347a8d419f71dbbfd5
-      internalID: 844249012
+      spriteID: cea1af226b038c1e0800000000000000
+      internalID: -2177436861004637460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_1
+      name: pixil-frame-0 - 2024-11-04T112652.089_1
       rect:
         serializedVersion: 2
         x: 96
@@ -204,16 +204,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9c02bcbe5fff9b941aa9f01e6e73a6fa
-      internalID: -1059705333
+      spriteID: aff935ee8203aa5d0800000000000000
+      internalID: -3050572845234806790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_2
+      name: pixil-frame-0 - 2024-11-04T112652.089_2
       rect:
         serializedVersion: 2
         x: 192
@@ -226,16 +226,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 39107125dc14309498c79ab1b420aca2
-      internalID: -166010124
+      spriteID: 2a2127a681b091a60800000000000000
+      internalID: 7645154041931109026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_3
+      name: pixil-frame-0 - 2024-11-04T112652.089_3
       rect:
         serializedVersion: 2
         x: 288
@@ -248,16 +248,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53b286e7c497b8b48b1d63d5bbb963f3
-      internalID: -652319274
+      spriteID: d19db3a4f51856d30800000000000000
+      internalID: 4424084455228692765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_4
+      name: pixil-frame-0 - 2024-11-04T112652.089_4
       rect:
         serializedVersion: 2
         x: 384
@@ -270,16 +270,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 37c29e6d7a5a3a849b1a2603934fb6d2
-      internalID: 2083666508
+      spriteID: 9cbccef200f56a3a0800000000000000
+      internalID: -6654526944984642615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_5
+      name: pixil-frame-0 - 2024-11-04T112652.089_5
       rect:
         serializedVersion: 2
         x: 480
@@ -292,16 +292,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9ac98591e62bb0b409ab2982f26bd7b5
-      internalID: 46009036
+      spriteID: 0bbffbe26de6c6f10800000000000000
+      internalID: 2264306578846907312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_6
+      name: pixil-frame-0 - 2024-11-04T112652.089_6
       rect:
         serializedVersion: 2
         x: 576
@@ -314,16 +314,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9220da3e36d55e74f828b54f7bcb8a46
-      internalID: 1891840010
+      spriteID: de80fd966579dba90800000000000000
+      internalID: -7296509423871129363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_7
+      name: pixil-frame-0 - 2024-11-04T112652.089_7
       rect:
         serializedVersion: 2
         x: 672
@@ -336,16 +336,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7488bb152418fb94bb4b5e500a836dd0
-      internalID: -752170234
+      spriteID: 8a93168115fc0f9f0800000000000000
+      internalID: -436621216646612568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_8
+      name: pixil-frame-0 - 2024-11-04T112652.089_8
       rect:
         serializedVersion: 2
         x: 0
@@ -358,16 +358,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8823e2f60c77cd7449f6591dd31dbab3
-      internalID: 1348885201
+      spriteID: def3fec87ffde2b60800000000000000
+      internalID: 7723356665301385197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_9
+      name: pixil-frame-0 - 2024-11-04T112652.089_9
       rect:
         serializedVersion: 2
         x: 96
@@ -380,16 +380,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c6de60e5475f4c439f87278990190dc
-      internalID: 278458931
+      spriteID: 2c2c9cf68d5637b70800000000000000
+      internalID: 8895565669249696450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_10
+      name: pixil-frame-0 - 2024-11-04T112652.089_10
       rect:
         serializedVersion: 2
         x: 192
@@ -402,16 +402,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dec60145b7155fd46ac23ee0e945ba05
-      internalID: 1902951010
+      spriteID: 992028d08ddc16930800000000000000
+      internalID: 4134812260726080153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_11
+      name: pixil-frame-0 - 2024-11-04T112652.089_11
       rect:
         serializedVersion: 2
         x: 288
@@ -424,16 +424,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 90c847f635d94024d8c4a880827a3437
-      internalID: -496201169
+      spriteID: a4f12e2f13830c990800000000000000
+      internalID: -7367827203198673078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_12
+      name: pixil-frame-0 - 2024-11-04T112652.089_12
       rect:
         serializedVersion: 2
         x: 384
@@ -446,16 +446,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ee251b46c7c048340a89812983e33365
-      internalID: -1149228574
+      spriteID: a08dee77dc43230e0800000000000000
+      internalID: -2291711203293079542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_13
+      name: pixil-frame-0 - 2024-11-04T112652.089_13
       rect:
         serializedVersion: 2
         x: 480
@@ -468,16 +468,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 67648ed3ca1d7f146a4515af13fe3987
-      internalID: 1930633773
+      spriteID: 613e86b1eacb1a900800000000000000
+      internalID: 694043273561957142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_14
+      name: pixil-frame-0 - 2024-11-04T112652.089_14
       rect:
         serializedVersion: 2
         x: 576
@@ -490,16 +490,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5d723f2507fb39f47b38c4ed9c7ab24c
-      internalID: -1753072869
+      spriteID: 8531ac4cbc109cea0800000000000000
+      internalID: -5852144266099682472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_15
+      name: pixil-frame-0 - 2024-11-04T112652.089_15
       rect:
         serializedVersion: 2
         x: 672
@@ -512,16 +512,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 355feb7f8d660e4449f6805e90b0e2bb
-      internalID: 486275266
+      spriteID: f66c9114ad017a530800000000000000
+      internalID: 3866077334701983343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_16
+      name: pixil-frame-0 - 2024-11-04T112652.089_16
       rect:
         serializedVersion: 2
         x: 0
@@ -534,16 +534,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 684ff4afb924e794a9d4b4455ca5ca6b
-      internalID: -398243958
+      spriteID: 5646ddebbfb68ac40800000000000000
+      internalID: 5523783671953056869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_17
+      name: pixil-frame-0 - 2024-11-04T112652.089_17
       rect:
         serializedVersion: 2
         x: 96
@@ -556,16 +556,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8237c07d4228e574fa2bcc2388b19654
-      internalID: -1607661697
+      spriteID: a4c6e6946ce2135e0800000000000000
+      internalID: -1931711335994856374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_18
+      name: pixil-frame-0 - 2024-11-04T112652.089_18
       rect:
         serializedVersion: 2
         x: 192
@@ -578,16 +578,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 24bda0981eeb00242849429658e871f6
-      internalID: 678390620
+      spriteID: 2d7ee3f0f20596320800000000000000
+      internalID: 2551658826931562450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_19
+      name: pixil-frame-0 - 2024-11-04T112652.089_19
       rect:
         serializedVersion: 2
         x: 288
@@ -600,16 +600,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 35eaff92637c84a499cf52635c6b8482
-      internalID: 1533631553
+      spriteID: 06926c9c3bd5e22f0800000000000000
+      internalID: -995755440836564640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_20
+      name: pixil-frame-0 - 2024-11-04T112652.089_20
       rect:
         serializedVersion: 2
         x: 384
@@ -622,16 +622,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 684b997ebbb10f3429394b3fdaeb1932
-      internalID: 2052311210
+      spriteID: a58a6c47139452ac0800000000000000
+      internalID: -3880615027148412838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_21
+      name: pixil-frame-0 - 2024-11-04T112652.089_21
       rect:
         serializedVersion: 2
         x: 480
@@ -644,16 +644,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8e73b7c69e7c0fa41abe3eec49c8eda7
-      internalID: -1837969272
+      spriteID: a2216fba35344efe0800000000000000
+      internalID: -1160728777308368342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_22
+      name: pixil-frame-0 - 2024-11-04T112652.089_22
       rect:
         serializedVersion: 2
         x: 576
@@ -666,16 +666,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 386feea6755baa442a9caf488c16c551
-      internalID: -1381995998
+      spriteID: 3a1fc31f135faf180800000000000000
+      internalID: -9080676103789678173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_23
+      name: pixil-frame-0 - 2024-11-04T112652.089_23
       rect:
         serializedVersion: 2
         x: 672
@@ -688,32 +688,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c888c8dda116b8748a29ec19cea29f4f
-      internalID: -1929098942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixil-frame-0 - 2024-11-03T185107.960_24
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 800
-        width: 96
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68600a63846a31e40941798b4fa80868
-      internalID: -912119502
+      spriteID: d873ce94df7b74760800000000000000
+      internalID: 7442119207747860365
       vertices: []
       indices: 
       edges: []
@@ -722,7 +700,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 247d27347d8e93a448467b0904b059ee
+    spriteID: 67eecfafc13c8774fb6bf8aed7acb1c4
     internalID: 0
     vertices: []
     indices: 
@@ -732,31 +710,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixil-frame-0 - 2024-11-03T185107.960_0: 844249012
-      pixil-frame-0 - 2024-11-03T185107.960_1: -1059705333
-      pixil-frame-0 - 2024-11-03T185107.960_10: 1902951010
-      pixil-frame-0 - 2024-11-03T185107.960_11: -496201169
-      pixil-frame-0 - 2024-11-03T185107.960_12: -1149228574
-      pixil-frame-0 - 2024-11-03T185107.960_13: 1930633773
-      pixil-frame-0 - 2024-11-03T185107.960_14: -1753072869
-      pixil-frame-0 - 2024-11-03T185107.960_15: 486275266
-      pixil-frame-0 - 2024-11-03T185107.960_16: -398243958
-      pixil-frame-0 - 2024-11-03T185107.960_17: -1607661697
-      pixil-frame-0 - 2024-11-03T185107.960_18: 678390620
-      pixil-frame-0 - 2024-11-03T185107.960_19: 1533631553
-      pixil-frame-0 - 2024-11-03T185107.960_2: -166010124
-      pixil-frame-0 - 2024-11-03T185107.960_20: 2052311210
-      pixil-frame-0 - 2024-11-03T185107.960_21: -1837969272
-      pixil-frame-0 - 2024-11-03T185107.960_22: -1381995998
-      pixil-frame-0 - 2024-11-03T185107.960_23: -1929098942
-      pixil-frame-0 - 2024-11-03T185107.960_24: -912119502
-      pixil-frame-0 - 2024-11-03T185107.960_3: -652319274
-      pixil-frame-0 - 2024-11-03T185107.960_4: 2083666508
-      pixil-frame-0 - 2024-11-03T185107.960_5: 46009036
-      pixil-frame-0 - 2024-11-03T185107.960_6: 1891840010
-      pixil-frame-0 - 2024-11-03T185107.960_7: -752170234
-      pixil-frame-0 - 2024-11-03T185107.960_8: 1348885201
-      pixil-frame-0 - 2024-11-03T185107.960_9: 278458931
+      pixil-frame-0 - 2024-11-04T112652.089_0: -2177436861004637460
+      pixil-frame-0 - 2024-11-04T112652.089_1: -3050572845234806790
+      pixil-frame-0 - 2024-11-04T112652.089_10: 4134812260726080153
+      pixil-frame-0 - 2024-11-04T112652.089_11: -7367827203198673078
+      pixil-frame-0 - 2024-11-04T112652.089_12: -2291711203293079542
+      pixil-frame-0 - 2024-11-04T112652.089_13: 694043273561957142
+      pixil-frame-0 - 2024-11-04T112652.089_14: -5852144266099682472
+      pixil-frame-0 - 2024-11-04T112652.089_15: 3866077334701983343
+      pixil-frame-0 - 2024-11-04T112652.089_16: 5523783671953056869
+      pixil-frame-0 - 2024-11-04T112652.089_17: -1931711335994856374
+      pixil-frame-0 - 2024-11-04T112652.089_18: 2551658826931562450
+      pixil-frame-0 - 2024-11-04T112652.089_19: -995755440836564640
+      pixil-frame-0 - 2024-11-04T112652.089_2: 7645154041931109026
+      pixil-frame-0 - 2024-11-04T112652.089_20: -3880615027148412838
+      pixil-frame-0 - 2024-11-04T112652.089_21: -1160728777308368342
+      pixil-frame-0 - 2024-11-04T112652.089_22: -9080676103789678173
+      pixil-frame-0 - 2024-11-04T112652.089_23: 7442119207747860365
+      pixil-frame-0 - 2024-11-04T112652.089_3: 4424084455228692765
+      pixil-frame-0 - 2024-11-04T112652.089_4: -6654526944984642615
+      pixil-frame-0 - 2024-11-04T112652.089_5: 2264306578846907312
+      pixil-frame-0 - 2024-11-04T112652.089_6: -7296509423871129363
+      pixil-frame-0 - 2024-11-04T112652.089_7: -436621216646612568
+      pixil-frame-0 - 2024-11-04T112652.089_8: 7723356665301385197
+      pixil-frame-0 - 2024-11-04T112652.089_9: 8895565669249696450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
