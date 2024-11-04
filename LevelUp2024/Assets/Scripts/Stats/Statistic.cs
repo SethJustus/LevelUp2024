@@ -35,13 +35,10 @@ public class Statistic : ScriptableObject
         {
             this.TickRateSeconds = this.Experience / 100f;
         }
-
-        Debug.Log($"Gained {amount} Experience! New Experience: {this.Experience}");
     }
 
     private IEnumerator TickCoroutine(int amount)
     {
-        Debug.Log("TickCoroutine started");
         this.IsTicking = true;
         yield return new WaitForSeconds(TickRateSeconds);
         this.GainExperience(amount);

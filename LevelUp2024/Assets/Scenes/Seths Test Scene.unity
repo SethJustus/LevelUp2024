@@ -302,7 +302,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.48
+  orthographic size: 4.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   MoveAction: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  DashAction: {fileID: -2099379676528639254, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!114 &301544489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedStatistic: {fileID: 11400000, guid: b37abcc15974e5f4bb89776609fc52e1, type: 2}
+  AgilityStatistic: {fileID: 11400000, guid: 1f29f5056d1b36a48a1fd333461f9c9e, type: 2}
 --- !u!50 &301544490
 Rigidbody2D:
   serializedVersion: 5
