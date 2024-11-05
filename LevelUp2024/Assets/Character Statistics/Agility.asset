@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aece63980a8f735429ed4a2d64d25805, type: 3}
   m_Name: Agility
   m_EditorClassIdentifier: 
-  Experience: 50
+  Experience: 90
   TickRateSeconds: 0
   SyncTickRate: 0

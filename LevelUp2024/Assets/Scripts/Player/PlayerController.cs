@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
             return;
         }
 
+        this.AgilityStatistic.TryGainExperience(1);
         this._rigidbody.AddForce(movementVector * this.AgilityStatistic.Experience, ForceMode2D.Impulse);
         this.StartCoroutine(this.DashCooldown());
     }
