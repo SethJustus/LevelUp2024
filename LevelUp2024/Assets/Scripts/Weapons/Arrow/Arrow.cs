@@ -18,12 +18,14 @@ public class Arrow : MonoBehaviour
     #endregion
     
     #region Unity Methods
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.collider.GetComponent<HealthObject>()?.TakeDamage(this.Damage);
-        
-        // this.Despawn();
+        DealDamage(collision.collider);
+    }
+
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        DealDamage(trigger);
     }
 
     #endregion
@@ -39,6 +41,18 @@ public class Arrow : MonoBehaviour
         this.StartCoroutine(DespawnCoroutine());
     }
 
+    void DealDamage(Collider2D collider)
+    {
+        var healthObject = collider.GetComponent<HealthObject>();
+        
+        if (healthObject == null || healthObject == this._parent)
+        {
+            return;
+        }
+
+        healthObject.TakeDamage(this.Damage);
+    }
+    
     void Despawn()
     {
         // TODO: spawn particles
