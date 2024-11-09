@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class HealthObject : MonoBehaviour
@@ -12,7 +13,8 @@ public class HealthObject : MonoBehaviour
     #endregion
     
     #region Unity Methods
-    void Start()
+
+    void Awake()
     {
         // Can't serialize interface in unity, so I am getting it manually here
         this._healthBar = GetComponentInChildren<IHealthBar>();
@@ -24,6 +26,7 @@ public class HealthObject : MonoBehaviour
     public void TakeDamage(int damage)
     {
         this.Health -= damage;
+        
         this._healthBar.UpdateUI(this.Health, this.MaxHealth);
         if (this.Health <= 0)
         {

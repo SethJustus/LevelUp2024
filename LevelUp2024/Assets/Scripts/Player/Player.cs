@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(IPlayerController))]
@@ -6,6 +7,7 @@ public class Player : HealthObject
     #region Fields
     private IPlayerController _controller;
     private Vector2 _movementVector;
+    private Vector2 _dashVector;
     private bool _dashnextupdate;
     #endregion
     
@@ -18,6 +20,7 @@ public class Player : HealthObject
     public void Start()
     {
         this._controller = GetComponent<IPlayerController>();
+        this.StartCoroutine(this.TakeDamageTick());
     }
     
     void Update()
@@ -25,17 +28,25 @@ public class Player : HealthObject
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         if (DashAction.action.triggered)
         {
-            this._dashnextupdate = true;
+            _dashnextupdate = true;
         }
     }
 
     void FixedUpdate()
     {
-        _controller.HorizontalMove(_movementVector);
-        if (this._dashnextupdate)
+        _controller.Move(this._movementVector, _dashnextupdate);
+        if (_dashnextupdate)
         {
-            _controller.Dash(_movementVector);
-            this._dashnextupdate = false;
+            _dashnextupdate = false;
+        }
+    }
+
+    IEnumerator TakeDamageTick()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            this.TakeDamage(1);
         }
     }
 

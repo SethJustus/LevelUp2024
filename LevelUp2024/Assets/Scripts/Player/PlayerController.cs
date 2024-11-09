@@ -1,19 +1,30 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour, IPlayerController
 {
     #region Fields
     private Rigidbody2D _rigidbody;
-    private bool _canDash = true;
+    private Vector2 _dashDirection;    
+    private bool _isDashing;
+
+    #endregion
+    
+    #region Properties
+    public int DashCharge { get; set; } = 10;
     #endregion
     
     #region Parameters
-
+    [SerializeField] private float DashSpeed = 1500f;
+    
+    [SerializeField] private float DashDuration = 0.25f;
+    
     [SerializeField] private Statistic SpeedStatistic;
 
     [SerializeField] private Statistic AgilityStatistic;
+
     #endregion
     
     #region Unity Methods
@@ -21,10 +32,37 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         this._rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (this._isDashing)
+        {
+            collision.GetComponent<HealthObject>()?.TakeDamage(12);
+        }
+    }
+
     #endregion
     
     
     #region Public Methods
+
+    public void Move(Vector2 direction, bool dash)
+    {
+        if (dash)
+        {
+            this.StartDash(direction);
+        }
+
+        if (this._isDashing)
+        {
+            this.Dash();
+        }
+        else
+        {
+            this.HorizontalMove(direction);
+        }
+    }
+    
     public void HorizontalMove(Vector2 movementVector)
     {
         if (movementVector != Vector2.zero)
@@ -37,26 +75,31 @@ public class PlayerController : MonoBehaviour, IPlayerController
         // Use Time.deltaTime because physics logic is being called from Update
         this._rigidbody.linearVelocity = movementVector * speedMultiplier * Time.deltaTime;
     }
-
-    public void Dash(Vector2 movementVector)
+    
+    #region Dash
+    public void StartDash(Vector2 movementVector)
     {
-        if (!this._canDash)
+        // Don't dash again if we are currently dashing
+        if (this._isDashing)
         {
             return;
         }
-
-        this.AgilityStatistic.TryGainExperience(1);
-        this._rigidbody.AddForce(movementVector * this.AgilityStatistic.Experience, ForceMode2D.Impulse);
-        this.StartCoroutine(this.DashCooldown());
+        
+        this._dashDirection = movementVector;
+        this.StartCoroutine(this.StartDashCoroutine());
     }
     
-    private IEnumerator DashCooldown()
+    IEnumerator StartDashCoroutine()
     {
-        this._canDash = false;
-        // TODO: use a calculated field here instead of 1
-        yield return new WaitForSeconds(1);
-        this._canDash = true;
+        this._isDashing = true;
+        yield return new WaitForSeconds(this.DashDuration);
+        this._isDashing = false;
     }
-
+    
+    void Dash()
+    {
+        this._rigidbody.linearVelocity = _dashDirection * DashSpeed * Time.deltaTime;
+    }
+    #endregion
     #endregion 
 }
