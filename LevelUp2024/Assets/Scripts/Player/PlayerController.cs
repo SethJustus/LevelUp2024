@@ -2,6 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+public class PlayerControllerStatus
+{
+    public bool HasIFrames { get; set; }
+}
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour, IPlayerController
 {
@@ -13,14 +18,16 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
     
     #region Properties
-    public int DashCharge { get; set; } = 10;
+    public PlayerControllerStatus Status { get; private set; } = new();
     #endregion
     
     #region Parameters
+    [Header("Movement Parameters")]
     [SerializeField] private float DashSpeed = 1500f;
     
     [SerializeField] private float DashDuration = 0.25f;
     
+    [Header("Stat References")]
     [SerializeField] private Statistic SpeedStatistic;
 
     [SerializeField] private Statistic AgilityStatistic;
@@ -40,9 +47,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
             collision.GetComponent<HealthObject>()?.TakeDamage(12);
         }
     }
-
     #endregion
-    
     
     #region Public Methods
 

@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
     #region Unity Methods
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DealDamage(collision.collider);
+        //DealDamage(collision.collider);
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)

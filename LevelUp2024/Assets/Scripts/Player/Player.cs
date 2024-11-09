@@ -6,12 +6,12 @@ public class Player : HealthObject
 {
     #region Fields
     private IPlayerController _controller;
-    private Vector2 _movementVector;
-    private Vector2 _dashVector;
+    private Vector2 _movementVector; 
     private bool _dashnextupdate;
     #endregion
     
     #region Parameters
+    [Header("Input Settings")]
     [SerializeField] private InputActionReference MoveAction;
     [SerializeField] private InputActionReference DashAction;
     #endregion
@@ -20,7 +20,7 @@ public class Player : HealthObject
     public void Start()
     {
         this._controller = GetComponent<IPlayerController>();
-        this.StartCoroutine(this.TakeDamageTick());
+        //this.StartCoroutine(this.TakeDamageTick());
     }
     
     void Update()
@@ -41,15 +41,6 @@ public class Player : HealthObject
         }
     }
 
-    IEnumerator TakeDamageTick()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            this.TakeDamage(1);
-        }
-    }
-
     #endregion
     
     #region Methods
@@ -57,6 +48,29 @@ public class Player : HealthObject
     protected override void Die()
     {
         // TODO: Custom death logic goes here
+        
+        GameManager.Instance.OnPlayerDeath();
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        if (_controller.Status.HasIFrames)
+        {
+            return;
+        }
+
+        base.TakeDamage(damage);
+    }
+    #endregion
+    
+    #region Test Methods
+    IEnumerator TakeDamageTick()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            this.TakeDamage(1);
+        }
     }
     #endregion
 }
