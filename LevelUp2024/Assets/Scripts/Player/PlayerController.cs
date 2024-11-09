@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     public void Move(Vector2 direction, bool dash)
     {
+        this.Status.HasIFrames = this._isDashing;
+        
         if (dash)
         {
             this.StartDash(direction);
