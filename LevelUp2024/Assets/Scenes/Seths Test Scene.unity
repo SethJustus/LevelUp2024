@@ -988,6 +988,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b9d9b125b8a44fb7323223ae74faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
+  AutoHeal: 0
+  AutoHealDelaySecs: 3
+  AutoHealRate: 0.1
   TimeBetweenSpawns: 1.14
   ArrowPrefab: {fileID: 8890026588803075277, guid: 718fd488ead2bb4438da2c639ac1a7c5, type: 3}
 --- !u!212 &1270458293
@@ -1229,7 +1233,7 @@ GameObject:
   - component: {fileID: 1466298160}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

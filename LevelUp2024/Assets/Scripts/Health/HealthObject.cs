@@ -29,13 +29,19 @@ public class HealthObject : MonoBehaviour
 
     void Awake()
     {
-        // Can't serialize interface in unity, so I am getting it manually here
-        this._healthBar = GetComponentInChildren<IHealthBar>();
+        this.OnAwake();
     }
 
     #endregion
     
     #region Methods
+
+    public void OnAwake()
+    {
+        // Can't serialize interface in unity, so I am getting it manually here
+        this._healthBar = GetComponentInChildren<IHealthBar>();
+    }
+
     public virtual void TakeDamage(int damage)
     {
         this.Health -= damage;
