@@ -49,8 +49,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
     }
     #endregion
     
-    #region Public Methods
-
+    #region Methods
+    
     public void Move(Vector2 direction, bool dash)
     {
         this.Status.HasIFrames = this._isDashing;
@@ -83,7 +83,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
         this._rigidbody.linearVelocity = movementVector * speedMultiplier * Time.deltaTime;
     }
     
-    #region Dash
     public void StartDash(Vector2 movementVector)
     {
         // Don't dash again if we are currently dashing
@@ -107,6 +106,5 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         this._rigidbody.linearVelocity = _dashDirection * DashSpeed * Time.deltaTime;
     }
-    #endregion
     #endregion 
 }
