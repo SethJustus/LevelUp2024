@@ -4,5 +4,5 @@ public interface IWeapon
 {
     bool IsEquipped { get; set; }
 
-    void Use();
+    void Attack();
 }

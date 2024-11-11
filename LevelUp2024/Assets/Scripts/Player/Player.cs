@@ -2,25 +2,28 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(IPlayerController))]
+[RequireComponent(typeof(WeaponManager))]
 public class Player : HealthObject
 {
     #region Fields
     private IPlayerController _controller;
+    private WeaponManager _weaponManager;
     private Vector2 _movementVector; 
-    private bool _dashnextupdate;
+    private bool _dashNextUpdate;
     #endregion
     
     #region Parameters
     [Header("Input Settings")]
     [SerializeField] private InputActionReference MoveAction;
     [SerializeField] private InputActionReference DashAction;
+    [SerializeField] private InputActionReference AttackAction;
     #endregion
     
     #region Unity Methods
     public void Start()
     {
         this._controller = GetComponent<IPlayerController>();
-        //this.StartCoroutine(this.TakeDamageTick());
+        this._weaponManager = GetComponent<WeaponManager>();
     }
     
     void Update()
@@ -28,16 +31,23 @@ public class Player : HealthObject
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         if (DashAction.action.triggered)
         {
-            _dashnextupdate = true;
+            _dashNextUpdate = true;
+        }
+
+        if (AttackAction.action.triggered)
+        {
+            Debug.Log("attack action triggered");
+            // Run the attack method on the current weapon
+            _weaponManager.EquippedWeapon?.Attack();
         }
     }
 
     void FixedUpdate()
     {
-        _controller.Move(this._movementVector, _dashnextupdate);
-        if (_dashnextupdate)
+        _controller.Move(this._movementVector, _dashNextUpdate);
+        if (_dashNextUpdate)
         {
-            _dashnextupdate = false;
+            _dashNextUpdate = false;
         }
     }
 
