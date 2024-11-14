@@ -67,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -384,7 +384,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Walk_2_0: -9006159056731634531
+      Warrior_Walk_2_1: 4077950388985315564
+      Warrior_Walk_2_10: -2238552332413894309
+      Warrior_Walk_2_2: -5633870972917130015
+      Warrior_Walk_2_3: 3043230690458224138
+      Warrior_Walk_2_4: -7162457054055690847
+      Warrior_Walk_2_5: -3420876117626694356
+      Warrior_Walk_2_6: -3103930676865450031
+      Warrior_Walk_2_7: -600963284680795867
+      Warrior_Walk_2_8: -8083721973518630706
+      Warrior_Walk_2_9: 6841527966196399632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

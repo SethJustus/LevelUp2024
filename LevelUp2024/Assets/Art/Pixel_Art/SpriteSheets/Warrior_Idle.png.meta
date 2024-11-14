@@ -97,7 +97,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -135,7 +135,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -634,7 +634,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Idle_0: 7384290322352760091
+      Warrior_Idle_1: 5558041129755138300
+      Warrior_Idle_10: 461692128451751519
+      Warrior_Idle_11: -6010744377182215988
+      Warrior_Idle_12: 9115829143907622414
+      Warrior_Idle_13: 3747058354943739861
+      Warrior_Idle_14: 5024376927914601611
+      Warrior_Idle_15: 2201096771453840385
+      Warrior_Idle_16: 5751987053862491761
+      Warrior_Idle_17: 8723693599102001777
+      Warrior_Idle_18: -2415670394241362416
+      Warrior_Idle_19: -4342383079804315159
+      Warrior_Idle_2: 5494728702781700201
+      Warrior_Idle_20: 6714101540386994310
+      Warrior_Idle_3: 855971943943930739
+      Warrior_Idle_4: 8590257050535953886
+      Warrior_Idle_5: -1175184007495930954
+      Warrior_Idle_6: -4675935811743254547
+      Warrior_Idle_7: 1839488653993705794
+      Warrior_Idle_8: -1183950638305906269
+      Warrior_Idle_9: 3564692980043556738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

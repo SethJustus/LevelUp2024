@@ -163,7 +163,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -201,7 +201,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1184,7 +1184,50 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Warrior_Death_2_0: 2158895428240908430
+      Warrior_Death_2_1: 3773870291250649683
+      Warrior_Death_2_10: -3111117700436473125
+      Warrior_Death_2_11: 6122139696989853367
+      Warrior_Death_2_12: 5690409783074126049
+      Warrior_Death_2_13: -2051984548041914165
+      Warrior_Death_2_14: 1943062484279047929
+      Warrior_Death_2_15: -9042131841789315432
+      Warrior_Death_2_16: 7964909858361560766
+      Warrior_Death_2_17: -1263389924569462783
+      Warrior_Death_2_18: 4137497739717360706
+      Warrior_Death_2_19: 7389085027494070546
+      Warrior_Death_2_2: 2740801223130823916
+      Warrior_Death_2_20: -885718232865959735
+      Warrior_Death_2_21: -1876228345019054594
+      Warrior_Death_2_22: -8211778726704528382
+      Warrior_Death_2_23: -7548375417844090454
+      Warrior_Death_2_24: -195515337978618094
+      Warrior_Death_2_25: -7061782383005913394
+      Warrior_Death_2_26: -3049745176564385460
+      Warrior_Death_2_27: 5499745028523350015
+      Warrior_Death_2_28: 1238966293055610999
+      Warrior_Death_2_29: -5325216672405748754
+      Warrior_Death_2_3: 8870205014570913383
+      Warrior_Death_2_30: 861924242135804403
+      Warrior_Death_2_31: 5452395911329694880
+      Warrior_Death_2_32: -2271792951966828616
+      Warrior_Death_2_33: 2256240611020723014
+      Warrior_Death_2_34: 2745084566789735922
+      Warrior_Death_2_35: -5185902037948996921
+      Warrior_Death_2_36: -2787911613698261200
+      Warrior_Death_2_37: -893375047588926481
+      Warrior_Death_2_38: 5903083027131749784
+      Warrior_Death_2_39: 200506668183025493
+      Warrior_Death_2_4: 4016392480618329770
+      Warrior_Death_2_40: 7113485279085325731
+      Warrior_Death_2_41: -4502930855916544577
+      Warrior_Death_2_42: 4308936215500028437
+      Warrior_Death_2_5: -7045010727242775369
+      Warrior_Death_2_6: 491714940569557313
+      Warrior_Death_2_7: 6523579764638733775
+      Warrior_Death_2_8: -4589112569184853850
+      Warrior_Death_2_9: 7297920068328581386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
