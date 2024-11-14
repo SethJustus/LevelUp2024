@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(IPlayerController))]
@@ -17,6 +19,7 @@ public class Player : HealthObject
     [SerializeField] private InputActionReference MoveAction;
     [SerializeField] private InputActionReference DashAction;
     [SerializeField] private InputActionReference AttackAction;
+    [SerializeField] private LayerMask Npc_Layer;
     #endregion
     
     #region Unity Methods
@@ -28,7 +31,23 @@ public class Player : HealthObject
     
     void Update()
     {
+        Collider2D[] NearbyeNpcs = Physics2D.OverlapCircleAll(this.transform.position, 3f, Npc_Layer);
+        if(NearbyeNpcs.Length >= 1){
+            // init setup for algo
+            Collider2D NearestNpc = NearbyeNpcs[0];
+            double distance = Math.Sqrt(Math.Pow(this.transform.position[0] - NearestNpc.transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearestNpc.transform.position[1], 2));
+            for(int i = 1; i < NearbyeNpcs.Length; i++){
+                // euclidian distance checks for the nearest npc
+                if(distance < Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2))
+                {
+                    NearestNpc = NearbyeNpcs[i];
+                    distance = Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2);
+                }
+            }
+            print(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+        }
         _movementVector = MoveAction.action.ReadValue<Vector2>();
+        //print(_movementVector);
         if (DashAction.action.triggered)
         {
             _dashNextUpdate = true;
@@ -54,6 +73,7 @@ public class Player : HealthObject
     #endregion
     
     #region Methods
+
     // overriding the Die() method from HealthObject base class
     protected override void Die()
     {

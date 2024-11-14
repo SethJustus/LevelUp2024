@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     
     public void HorizontalMove(Vector2 movementVector)
     {
+        print(SpeedStatistic.Experience);
         if (movementVector != Vector2.zero)
         {
             this.SpeedStatistic.TryGainExperience(1);
