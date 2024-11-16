@@ -229,11 +229,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &251321505 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4345115215310909053, guid: b26a5434e26ffc7489a5bb988cb74361, type: 3}
-  m_PrefabInstance: {fileID: 2689377481178353358}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &265230922
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +371,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.135
+  orthographic size: 4.48
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1604,6 +1599,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 274756369}
+    - target: {fileID: 2964893154694959276, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964893154694959276, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964893154694959276, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964893154694959276, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 3055395924511581386, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1648,7 +1659,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6882004805239793603, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
