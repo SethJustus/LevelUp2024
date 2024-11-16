@@ -965,6 +965,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1271551993357778726, guid: 04dbbe0abbf190244b61e94865b850e7, type: 3}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405234955614083834, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223165193568104718, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6251038111101698313, guid: 7e8c293e388f8fa4d853febb123ce3d9, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
