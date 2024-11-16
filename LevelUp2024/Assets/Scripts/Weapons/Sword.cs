@@ -6,7 +6,8 @@ public class Sword : MonoBehaviour, IWeapon
 {
     #region Fields
     private bool _isAttacking;
-    private Collider2D _hitBox;
+    private Vector3 _startPosition;
+    private Quaternion _startRotation;
     #endregion
     
     #region Properties
@@ -14,17 +15,20 @@ public class Sword : MonoBehaviour, IWeapon
     #endregion
     
     #region Parameters
-    [SerializeField] private int SwordDamage = 25;
+    [SerializeField] GameObject Player;
 
-    [SerializeField] private float SwordHitboxUptimeSecs = 0.5f;
+    [SerializeField] private float SwingSpeed = 500;
+
+    [SerializeField] private int SwordDamage = 25;
     #endregion
     
     #region Unity Methods
 
     void Start()
     {
-        this._hitBox = this.GetComponent<Collider2D>();
-        this._hitBox.enabled = false;
+        _startPosition = transform.position;
+        _startRotation = transform.rotation;
+        this.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -42,6 +46,7 @@ public class Sword : MonoBehaviour, IWeapon
     #region Methods
     public void Attack()
     {
+        Debug.Log("Swinging the sword");
         if (this._isAttacking)
         {
             return;
@@ -53,10 +58,21 @@ public class Sword : MonoBehaviour, IWeapon
     private IEnumerator AttackCoroutine()
     {
         this._isAttacking = true;
-        this._hitBox.enabled = true;
-        yield return new WaitForSeconds(SwordHitboxUptimeSecs);
-        this._hitBox.enabled = false;
+        this.gameObject.SetActive(true);
+        
+        while (Mathf.Abs(transform.eulerAngles.z - 360) > 15f)
+        {
+            Debug.Log(Mathf.Abs(transform.eulerAngles.z - 360));
+            transform.RotateAround(Player.transform.position, new Vector3(0,0,1), SwingSpeed * Time.deltaTime);
+            yield return null;
+        }
+        
+        // Reset the position and rotation
+        this.transform.localRotation = _startRotation;
+        this.transform.localPosition = _startPosition;
+        
         this._isAttacking = false;
+        this.gameObject.SetActive(false);
     }
 
     #endregion
