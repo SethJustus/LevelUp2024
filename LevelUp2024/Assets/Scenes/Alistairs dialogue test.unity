@@ -561,6 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 2019863305}
   TextObj: {fileID: 79682962}
+  InteractAction: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &1380878938
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +719,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265786911189318221, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: InteractAction
+      value: 
+      objectReference: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 265786911189318221, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
       propertyPath: Npc_Layer.m_Bits
       value: 64

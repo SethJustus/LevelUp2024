@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(IPlayerController))]
 [RequireComponent(typeof(WeaponManager))]
@@ -19,6 +20,7 @@ public class Player : HealthObject
     [SerializeField] private InputActionReference MoveAction;
     [SerializeField] private InputActionReference DashAction;
     [SerializeField] private InputActionReference AttackAction;
+    [SerializeField] private InputActionReference InteractAction;
     [SerializeField] private LayerMask Npc_Layer;
     #endregion
     
@@ -44,7 +46,9 @@ public class Player : HealthObject
                     distance = Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2);
                 }
             }
-            DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+            if (InteractAction.action.triggered){
+                DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+            }
         }
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         //print(_movementVector);

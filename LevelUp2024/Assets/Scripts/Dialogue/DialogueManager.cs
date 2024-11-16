@@ -1,14 +1,17 @@
 using TMPro;
 using UnityEngine;
 using Ink.Runtime;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
     [SerializeField] private GameObject panel;
     [SerializeField] private TextMeshProUGUI TextObj;
+    [SerializeField] private InputActionReference InteractAction;
 
     private Story CurrentSpeach;
+    private bool firstframe;
     private bool textPlaying;
     private static DialogueManager instance;
     private void Awake(){
@@ -28,10 +31,14 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update(){
-        if(!textPlaying){
+        if(!textPlaying || firstframe){
+            firstframe = false;
             return;
         }
-        ContStory();
+        if (InteractAction.action.triggered){
+            
+            ContStory();
+        }
 
     }
 
@@ -41,6 +48,7 @@ public class DialogueManager : MonoBehaviour
         panel.SetActive(true);
 
         ContStory();
+        firstframe = true;
     }
 
     public void ExitDialogue(){
@@ -52,8 +60,9 @@ public class DialogueManager : MonoBehaviour
     private void ContStory(){
         if(CurrentSpeach.canContinue){
             TextObj.text = CurrentSpeach.Continue();
-
+            print(TextObj.text);
         } else{
+            print("hoy");
             ExitDialogue();
         }
     }
