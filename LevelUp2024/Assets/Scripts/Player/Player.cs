@@ -22,6 +22,9 @@ public class Player : HealthObject
     [SerializeField] private InputActionReference DashAction;
     [SerializeField] private InputActionReference AttackAction;
     [SerializeField] private InputActionReference InteractAction;
+    [SerializeField] private InputActionReference PreviousAction;
+    [SerializeField] private InputActionReference NextAction;
+    [Header("NPC Settings")]
     [SerializeField] private LayerMask Npc_Layer;
     #endregion
     
@@ -34,7 +37,7 @@ public class Player : HealthObject
     
     void Update()
     {
-        this.GetInput();
+        this.HandleInput();
         
         this.CheckForNPCs();
     }
@@ -70,7 +73,7 @@ public class Player : HealthObject
         base.TakeDamage(damage);
     }
 
-    private void GetInput()
+    private void HandleInput()
     {
         _movementVector = MoveAction.action.ReadValue<Vector2>();
 
@@ -83,6 +86,16 @@ public class Player : HealthObject
         {
             // Run the attack method on the current weapon
             _weaponManager.EquippedWeapon?.Attack();
+        }
+
+        if (NextAction.action.triggered)
+        {
+            _weaponManager.EquipNext();
+        }
+        
+        if (PreviousAction.action.triggered)
+        {
+            _weaponManager.EquipPrevious();
         }
     }
 

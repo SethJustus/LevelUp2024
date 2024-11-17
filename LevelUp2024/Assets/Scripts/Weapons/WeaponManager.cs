@@ -5,15 +5,13 @@ public class WeaponManager : MonoBehaviour
 {
     private IWeapon[] weapons;
 
-    [CanBeNull] public IWeapon EquippedWeapon;
+    [CanBeNull] public IWeapon EquippedWeapon => weapons[_equippedWeaponIndex];
 
     private int _equippedWeaponIndex;
 
     void Awake()
     {
         weapons = GetComponentsInChildren<IWeapon>();
-        this.EquippedWeapon = weapons[0];
-        Debug.Log(weapons.Length + " weapons found");
     }
 
     public void EquipPrevious()
@@ -30,6 +28,7 @@ public class WeaponManager : MonoBehaviour
 
     public void EquipNext()
     {
+        Debug.Log("Equipping Next");
         if (_equippedWeaponIndex == weapons.Length - 1)
         {
             _equippedWeaponIndex = 0;
