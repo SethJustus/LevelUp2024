@@ -34,41 +34,9 @@ public class Player : HealthObject
     
     void Update()
     {
-        Collider2D[] NearbyeNpcs = Physics2D.OverlapCircleAll(this.transform.position, 3f, Npc_Layer);
-        if(NearbyeNpcs.Length >= 1){
-            // init setup for algo
-            Collider2D NearestNpc = NearbyeNpcs[0];
-            double distance = Math.Sqrt(Math.Pow(this.transform.position[0] - NearestNpc.transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearestNpc.transform.position[1], 2));
-            for(int i = 1; i < NearbyeNpcs.Length; i++){
-                // euclidian distance checks for the nearest npc
-                if(distance < Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2))
-                {
-                    NearestNpc = NearbyeNpcs[i];
-                    distance = Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2);
-                }
-            }
-            NearestNpc.GetComponent<Npc_behaviour>().Indicator = true;
-            LastNearestNpc = NearestNpc;
-            if (InteractAction.action.triggered){
-                DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
-            }
-        } else if (LastNearestNpc){
-            LastNearestNpc.GetComponent<Npc_behaviour>().Indicator = false;
-            LastNearestNpc = null;
-        }
-        _movementVector = MoveAction.action.ReadValue<Vector2>();
-        //print(_movementVector);
-        if (DashAction.action.triggered)
-        {
-            _dashNextUpdate = true;
-        }
-
-        if (AttackAction.action.triggered)
-        {
-            Debug.Log("attack action triggered");
-            // Run the attack method on the current weapon
-            _weaponManager.EquippedWeapon?.Attack();
-        }
+        this.GetInput();
+        
+        this.CheckForNPCs();
     }
 
     void FixedUpdate()
@@ -101,6 +69,49 @@ public class Player : HealthObject
 
         base.TakeDamage(damage);
     }
+
+    private void GetInput()
+    {
+        _movementVector = MoveAction.action.ReadValue<Vector2>();
+
+        if (DashAction.action.triggered)
+        {
+            _dashNextUpdate = true;
+        }
+
+        if (AttackAction.action.triggered)
+        {
+            // Run the attack method on the current weapon
+            _weaponManager.EquippedWeapon?.Attack();
+        }
+    }
+
+    void CheckForNPCs()
+    {
+        Collider2D[] NearbyeNpcs = Physics2D.OverlapCircleAll(this.transform.position, 3f, Npc_Layer);
+        if(NearbyeNpcs.Length >= 1){
+            // init setup for algo
+            Collider2D NearestNpc = NearbyeNpcs[0];
+            double distance = Math.Sqrt(Math.Pow(this.transform.position[0] - NearestNpc.transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearestNpc.transform.position[1], 2));
+            for(int i = 1; i < NearbyeNpcs.Length; i++){
+                // euclidian distance checks for the nearest npc
+                if(distance < Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2))
+                {
+                    NearestNpc = NearbyeNpcs[i];
+                    distance = Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2);
+                }
+            }
+            NearestNpc.GetComponent<Npc_behaviour>().Indicator = true;
+            LastNearestNpc = NearestNpc;
+            if (InteractAction.action.triggered){
+                DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+            }
+        } else if (LastNearestNpc){
+            LastNearestNpc.GetComponent<Npc_behaviour>().Indicator = false;
+            LastNearestNpc = null;
+        }
+    }
+
     #endregion
     
     #region Test Methods
