@@ -13,6 +13,7 @@ public class Player : HealthObject
     private WeaponManager _weaponManager;
     private Vector2 _movementVector; 
     private bool _dashNextUpdate;
+    private Collider2D LastNearestNpc;
     #endregion
     
     #region Parameters
@@ -46,9 +47,14 @@ public class Player : HealthObject
                     distance = Math.Pow(this.transform.position[0] - NearbyeNpcs[i].transform.position[0], 2) + Math.Pow(this.transform.position[1] - NearbyeNpcs[i].transform.position[1], 2);
                 }
             }
+            NearestNpc.GetComponent<Npc_behaviour>().Indicator = true;
+            LastNearestNpc = NearestNpc;
             if (InteractAction.action.triggered){
                 DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
             }
+        } else if (LastNearestNpc){
+            LastNearestNpc.GetComponent<Npc_behaviour>().Indicator = false;
+            LastNearestNpc = null;
         }
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         //print(_movementVector);
