@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     private bool firstframe;
     private bool textPlaying;
     private static DialogueManager instance;
+    public Player Player;
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Än instance of singleton object DialogueManager already exists");
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Start(){
+        Player = null;
         textPlaying = false;
         panel.SetActive(false);
     }
@@ -52,6 +54,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void ExitDialogue(){
+        Player.InDialogue = false;
+        Player = null;
         textPlaying = false;
         panel.SetActive(false);
         TextObj.text = "";

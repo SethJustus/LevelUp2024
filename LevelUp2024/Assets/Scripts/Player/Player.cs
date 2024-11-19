@@ -14,6 +14,7 @@ public class Player : HealthObject
     private Vector2 _movementVector; 
     private bool _dashNextUpdate;
     private Collider2D LastNearestNpc;
+    public bool InDialogue;
     #endregion
     
     #region Parameters
@@ -30,10 +31,14 @@ public class Player : HealthObject
     {
         this._controller = GetComponent<IPlayerController>();
         this._weaponManager = GetComponent<WeaponManager>();
+        this.InDialogue = false;
     }
     
     void Update()
     {
+        if(InDialogue){
+            return;
+        }
         Collider2D[] NearbyeNpcs = Physics2D.OverlapCircleAll(this.transform.position, 3f, Npc_Layer);
         if(NearbyeNpcs.Length >= 1){
             // init setup for algo
@@ -50,7 +55,11 @@ public class Player : HealthObject
             NearestNpc.GetComponent<Npc_behaviour>().Indicator = true;
             LastNearestNpc = NearestNpc;
             if (InteractAction.action.triggered){
-                DialogueManager.GetInstance().EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+                InDialogue = true;
+                LastNearestNpc.GetComponent<Npc_behaviour>().Indicator = false;
+                DialogueManager Dmanager = DialogueManager.GetInstance();
+                Dmanager.EnterDialogue(NearestNpc.GetComponent<Npc_behaviour>().InkJSON);
+                Dmanager.Player = this;
             }
         } else if (LastNearestNpc){
             LastNearestNpc.GetComponent<Npc_behaviour>().Indicator = false;
