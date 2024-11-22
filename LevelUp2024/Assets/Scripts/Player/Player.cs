@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Networking;
 [RequireComponent(typeof(IPlayerController))]
 [RequireComponent(typeof(WeaponManager))]
 public class Player : HealthObject
@@ -15,6 +16,7 @@ public class Player : HealthObject
     private bool _dashNextUpdate;
     private Collider2D LastNearestNpc;
     public bool InDialogue;
+    public Animator animator;
     #endregion
     
     #region Parameters
@@ -81,6 +83,10 @@ public class Player : HealthObject
     private void HandleInput()
     {
         _movementVector = MoveAction.action.ReadValue<Vector2>();
+        float hmov = _movementVector[0];
+        float vmov = _movementVector[1];
+        animator.SetFloat("vspeed", vmov);
+        animator.SetFloat("hspeed", hmov);
 
         if (DashAction.action.triggered)
         {
