@@ -14,9 +14,14 @@ public class Player : HealthObject
     private WeaponManager _weaponManager;
     private Vector2 _movementVector; 
     private bool _dashNextUpdate;
+    private FocusObject _focusObject;
     private Collider2D LastNearestNpc;
     public bool InDialogue;
     public Animator animator;
+    #endregion
+    
+    #region Properties
+    public int Focus { get; private set; } = 0;
     #endregion
     
     #region Parameters
@@ -36,6 +41,7 @@ public class Player : HealthObject
     {
         this._controller = GetComponent<IPlayerController>();
         this._weaponManager = GetComponent<WeaponManager>();
+        this._focusObject = GetComponentInChildren<FocusObject>();
         this.InDialogue = false;
     }
     
@@ -73,12 +79,14 @@ public class Player : HealthObject
     public override void TakeDamage(int damage)
     {
         if (_controller.Status.HasIFrames)
-        {
-            return;
-        }
+        {            return;
+                 }
+         
+                 this._focusObject.BreakFocus();
+         
+                 base.TakeDamage(damage);
+             }
 
-        base.TakeDamage(damage);
-    }
 
     private void HandleInput()
     {
