@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -90,11 +91,26 @@ public class Player : HealthObject
 
     private void HandleInput()
     {
+        // animating input
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         float hmov = _movementVector[0];
         float vmov = _movementVector[1];
+
+        if(hmov != 0){
+            Vector2 flip = this.transform.localScale;
+            flip.x = Math.Abs(flip.x) * Math.Abs(hmov) / hmov;
+            this.transform.localScale = flip;
+            print(this.transform.localScale);
+        } else if(vmov == 0){
+            print("hi");
+        }
+        // if(flip != new Vector2(this.transform.localScale.x, this.transform.localScale.y)){
+        //     
+        // }
+        
+
         animator.SetFloat("vspeed", vmov);
-        animator.SetFloat("hspeed", hmov);
+        animator.SetFloat("hspeed", Math.Abs(hmov));
 
         if (DashAction.action.triggered)
         {
