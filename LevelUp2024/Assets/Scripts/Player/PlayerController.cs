@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     [SerializeField] private Statistic SpeedStatistic;
 
     [SerializeField] private Statistic AgilityStatistic;
+    [SerializeField] private CapsuleCollider2D non_dash_coll;
 
     #endregion
     
@@ -85,12 +86,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
     
     public void StartDash(Vector2 movementVector)
     {
+        
         // Don't dash again if we are currently dashing
         if (this._isDashing)
         {
             return;
         }
-        
+        non_dash_coll.enabled = false;
         this._dashDirection = movementVector;
         this.StartCoroutine(this.StartDashCoroutine());
     }
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         this._isDashing = true;
         yield return new WaitForSeconds(this.DashDuration);
         this._isDashing = false;
+        non_dash_coll.enabled = true;
     }
     
     void Dash()
