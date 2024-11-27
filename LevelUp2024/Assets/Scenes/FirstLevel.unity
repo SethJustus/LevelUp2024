@@ -32764,6 +32764,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: tutorial_npc
       objectReference: {fileID: 0}
+    - target: {fileID: 3328279121166566252, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Size.y
+      value: 3.2653058
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328279121166566252, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6089122423184705537, guid: 99b40d0e036d3894085698fd13e6f9fd, type: 3}
+    - target: {fileID: 3328279121166566252, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674070371861914105, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674070371861914105, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674070371861914105, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674070371861914105, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.71428573
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: -0.47619048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3.2653058
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750610551864712546, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790088693803805557, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790088693803805557, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.265306
+      objectReference: {fileID: 0}
     - target: {fileID: 5790088693803805557, guid: a9bf9d2abcc14384abb325c51a22395b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3207695
