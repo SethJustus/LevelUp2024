@@ -15,6 +15,7 @@ public class Sword : MonoBehaviour, IWeapon
     
     #region Parameters
 
+    [SerializeField] private Player Player;
     [SerializeField] private int SwordDamage = 25;
     
     [SerializeField] private float SwordHitboxUptimeSecs = 0.5f;
@@ -55,7 +56,11 @@ public class Sword : MonoBehaviour, IWeapon
     {
         this._isAttacking = true;
         this._hitBox.enabled = true;
+        Player.attacking = true;
+        Player.animator.SetBool("Attack", true);
         yield return new WaitForSeconds(SwordHitboxUptimeSecs);
+        Player.attacking = false;
+         Player.animator.SetBool("Attack", false);
         this._hitBox.enabled = false;
         this._isAttacking = false;
     }

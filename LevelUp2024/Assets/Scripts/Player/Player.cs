@@ -19,6 +19,7 @@ public class Player : HealthObject
     private Collider2D LastNearestNpc;
     public bool InDialogue;
     public Animator animator;
+    public bool attacking = false;
     #endregion
     
     #region Properties
@@ -91,6 +92,9 @@ public class Player : HealthObject
 
     private void HandleInput()
     {
+        if(attacking){
+            return;
+        }
         // animating input
         _movementVector = MoveAction.action.ReadValue<Vector2>();
         float hmov = _movementVector[0];

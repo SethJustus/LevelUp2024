@@ -10,7 +10,15 @@ public class ChasingAI : BaseEnemyAI
 
     public override void PlayerDetection()
     {
+        distanceFromPlayer = Vector2.Distance(transform.position, player.position);
         if(attacking){
+            if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime <= 0.95){
+                // attack hitbox
+                if(distanceFromPlayer < 20){
+                    
+                }
+            }
+            // stop attack
             if(anim.GetCurrentAnimatorStateInfo(0).length <= anim.GetCurrentAnimatorStateInfo(0).normalizedTime){
                 attacking = false;
                  anim.SetBool("attacking", false);
@@ -18,8 +26,7 @@ public class ChasingAI : BaseEnemyAI
             return;
         }
 
-        distanceFromPlayer = Vector2.Distance(transform.position, player.position);
-        print(distanceFromPlayer);
+        
         if (distanceFromPlayer < lineOfSight && distanceFromPlayer > attackRange)
         {
             //follow player
