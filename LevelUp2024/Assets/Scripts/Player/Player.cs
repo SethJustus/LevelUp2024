@@ -37,7 +37,17 @@ public class Player : HealthObject
     [Header("NPC Settings")]
     [SerializeField] private LayerMask Npc_Layer;
     #endregion
+
+    #region Parameters
+    [Header("Sound Clips")]
+    [SerializeField] private AudioClip PlayerAttackAudio;
+    #endregion
+
+    private AudioSource audioSource;
+
     
+
+
     #region Unity Methods
     public void Start()
     {
@@ -45,6 +55,7 @@ public class Player : HealthObject
         this._weaponManager = GetComponent<WeaponManager>();
         this._focusObject = GetComponentInChildren<FocusObject>();
         this.InDialogue = false;
+        this.audioSource = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -93,6 +104,8 @@ public class Player : HealthObject
     private void HandleInput()
     {
         if(attacking){
+            
+            audioSource.PlayOneShot(PlayerAttackAudio);
             return;
         }
         // animating input

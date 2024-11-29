@@ -18807,6 +18807,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1570730797}
+    - target: {fileID: 7232269197055679836, guid: d87fcb7822590cf44a60638f8659e596, type: 3}
+      propertyPath: SwingAttackAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 946d85d37fb2e5242ab6efd735276681, type: 3}
     - target: {fileID: 8471703943399802885, guid: d87fcb7822590cf44a60638f8659e596, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44921577
@@ -18919,6 +18923,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 179013171139943394, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265786911189318221, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
+      propertyPath: attacking
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 795486757130386208, guid: 83956eb2affa94840b674f0f6c7d7797, type: 3}
@@ -33047,7 +33055,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2148269684743930912, guid: 80e733012fdcd0545a964176e4fa4f12, type: 3}
       propertyPath: orthographic size
-      value: 0
+      value: 2.635
       objectReference: {fileID: 0}
     - target: {fileID: 4477934536232247253, guid: 80e733012fdcd0545a964176e4fa4f12, type: 3}
       propertyPath: m_LocalPosition.x

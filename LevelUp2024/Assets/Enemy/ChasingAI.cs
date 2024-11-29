@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ChasingAI : BaseEnemyAI
 {
@@ -7,6 +8,17 @@ public class ChasingAI : BaseEnemyAI
     public float attackRange;
     private bool attacking = false;
     public Animator anim;
+
+    #region Sound Variables
+    [Header("Sound Clips")]
+    [SerializeField] private AudioClip SwingAttackAudio;
+    #endregion
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public override void PlayerDetection()
     {
@@ -63,6 +75,7 @@ public class ChasingAI : BaseEnemyAI
         {
             //attack animation
             anim.SetBool("attacking", true);
+            audioSource.PlayOneShot(SwingAttackAudio);
             attacking = true;
         }
     }
