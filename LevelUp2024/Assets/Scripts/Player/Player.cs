@@ -70,6 +70,9 @@ public class Player : HealthObject
 
     void FixedUpdate()
     {
+        if(attacking){
+            return;
+        }
         _controller.Move(this._movementVector, _dashNextUpdate);
         if (_dashNextUpdate)
         {

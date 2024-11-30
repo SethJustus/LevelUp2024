@@ -58,6 +58,8 @@ public class Sword : MonoBehaviour, IWeapon
         this._hitBox.enabled = true;
         Player.attacking = true;
         Player.animator.SetBool("Attack", true);
+        Player.animator.SetFloat("vspeed", 0);
+        Player.animator.SetFloat("hspeed", 0);
         yield return new WaitForSeconds(SwordHitboxUptimeSecs);
         Player.attacking = false;
          Player.animator.SetBool("Attack", false);
